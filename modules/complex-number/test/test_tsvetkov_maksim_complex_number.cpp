@@ -11,7 +11,7 @@ TEST(Tsvetkov_Maksim_ComplexNumberTest, Pow_of_imaginary_unit) {
     bool res;
 
     // Act
-    res = z == z*z*z*z*z*z*z*z;
+    res = z == z*z*z*z*z*z*z*z*z;
 
     // Assert
     ASSERT_TRUE(res);
