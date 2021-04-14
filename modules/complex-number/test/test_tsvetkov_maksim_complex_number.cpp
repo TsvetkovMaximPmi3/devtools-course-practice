@@ -13,7 +13,8 @@ TEST(Tsvetkov_Maksim_ComplexNumberTest, Pow_of_imaginary_unit) {
 
     // Act
     
-    for(int i=0;i<2;i++)res1=res1*z;
+    for( int i = 0; i < 2; i++ )
+       res1=res1*z;
     // Assert
     ASSERT_EQ(res, res1);
 }
