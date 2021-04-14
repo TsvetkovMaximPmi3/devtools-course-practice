@@ -1,20 +1,21 @@
 // Copyright 2021 Tsvetkov Maksim
-
+#include <algorithm>
 #include <gtest/gtest.h>
 #include <tuple>
-
+#include <cmath>
 #include "include/complex_number.h"
 
 TEST(Tsvetkov_Maksim_ComplexNumberTest, Pow_of_imaginary_unit) {
     // Arrange
-    ComplexNumber z(0, 1.0);
-    bool res;
+    ComplexNumber z(0, 2.0);
+    ComplexNumber res(0,-8.0);
+    ComplexNumber res1(z);
 
     // Act
-    res = z == z*z*z*z*z*z*z*z*z;
-
+    
+    for(int i=0;i<2;i++)res1=res1*z;
     // Assert
-    ASSERT_TRUE(res);
+    ASSERT_EQ(res, res1);
 }
 
 TEST(Tsvetkov_Maksim_ComplexNumberTest, Use_of_lamda) {
