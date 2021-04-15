@@ -1,7 +1,7 @@
 // Copyright 2021 Tsvetkov Maksim
-#include <algorithm>
 #include <gtest/gtest.h>
 #include <tuple>
+#include <algorithm>
 #include <cmath>
 #include "include/complex_number.h"
 
