@@ -1,0 +1,45 @@
+// Copyright 2021 Tsvetkov Maxim
+
+#include "include/subseq_finder.h"
+
+SubseqFinder::SubseqFinder(std::vector <int> seq_1,
+std::vector <int> seq_2):seq_1(seq_1), seq_2(seq_2) {}
+
+std::vector<int> SubseqFinder::findMaxSubseq(std::vector<int> a,
+                                             std::vector<int> b) {
+    int firstSize = a.size();
+    int secondSize = b.size();
+    std::vector<int>result;
+    std::vector<std::vector <int>> sequencer(firstSize + 1,
+     std::vector<int>(secondSize + 1));
+    for (int i = firstSize - 1; i >= 0; i--) {
+        for (int j = secondSize - 1; j >= 0; j--) {
+            if (a[i] == b[j]) {
+                sequencer[i][j] = sequencer[i + 1][j + 1] + 1;
+            } else {
+                sequencer[i][j] = std::max(sequencer[i + 1][j],
+                                           sequencer[i][j + 1]);
+            }
+        }
+    }
+
+    for (int i = 0, j = 0;
+            i < firstSize && j < secondSize && sequencer[i][j] != 0;) {
+        if (a[i] == b[j]) {
+            result.push_back(a[i]);
+            i++;
+            j++;
+        } else {
+            if (sequencer[i][j] == sequencer[i + 1][j]) {
+                i++;
+            } else {
+                j++;
+            }
+        }
+    }
+    return result;
+}
+
+std::vector<int> SubseqFinder::getMaxSubseq() {
+    return findMaxSubseq(seq_1, seq_2);
+}
