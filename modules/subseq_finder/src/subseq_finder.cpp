@@ -1,5 +1,8 @@
 // Copyright 2021 Tsvetkov Maxim
 
+#include <algorithm>
+#include <vector>
+
 #include "include/subseq_finder.h"
 
 SubseqFinder::SubseqFinder(std::vector <int> seq_1,
