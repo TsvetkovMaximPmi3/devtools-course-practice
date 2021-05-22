@@ -34,7 +34,7 @@ TEST(Tsvetkov_Subseq_Finder, TestForCovSubseq1) {
 }
 
 TEST(Tsvetkov_Subseq_Finder, TestForCovSubseq2) {
-    SubseqFinder finder({0, 1, 2, 0, 1, 2,}, {0, 1, 2, 3, 4, 5});
+    SubseqFinder finder({0, 1, 2, 0, 1, 2}, {0, 1, 2, 3, 4, 5});
 
     ASSERT_EQ(finder.getMaxSubseq(), std::vector<int>({0, 1, 2}));
 }
