@@ -27,11 +27,18 @@ TEST(Tsvetkov_Subseq_Finder, TestMaximalSubseq) {
     ASSERT_EQ(finder.getMaxSubseq(), std::vector<int>({1, 2, 3}));
 }
 
-TEST(Tsvetkov_Subseq_Finder, TestForCovSubseq) {
+TEST(Tsvetkov_Subseq_Finder, TestForCovSubseq1) {
     SubseqFinder finder({1, 2, 3}, {0, 1, 2, 3, 4, 5});
 
     ASSERT_EQ(finder.getMaxSubseq(), std::vector<int>({1, 2, 3}));
 }
+
+TEST(Tsvetkov_Subseq_Finder, TestForCovSubseq2) {
+    SubseqFinder finder({0, 1, 2, 0, 1, 2,}, {0, 1, 2, 3, 4, 5});
+
+    ASSERT_EQ(finder.getMaxSubseq(), std::vector<int>({0, 1, 2}));
+}
+
 
 TEST(Tsvetkov_Subseq_Finder, TestFuncNoThrow) {
     ASSERT_NO_THROW(SubseqFinder::findMaxSubseq({1, 2, 3}, {2, 3}));
