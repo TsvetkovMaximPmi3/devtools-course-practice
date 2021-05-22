@@ -2,7 +2,7 @@
 
 #include <algorithm>
 #include <vector>
-
+#include <iostream>
 #include "include/subseq_finder.h"
 
 SubseqFinder::SubseqFinder(std::vector <int> seq_1,
