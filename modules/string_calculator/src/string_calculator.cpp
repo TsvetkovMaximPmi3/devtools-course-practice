@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <sstream>
+#include <string>
 #include "include/string_calculator.h"
 
 StringCalculator::StringCalculator(const std::string& str):
