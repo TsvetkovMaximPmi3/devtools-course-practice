@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
+#include <cassert>
 
 #include "include/string_calculator.h"
 #include "include/string_calculator_app.h"
@@ -23,9 +24,10 @@ std::string StringCalculatorApp::operator()(int argc, const char** argv) {
 
     std::ostringstream ss;
     int res;
-
+    StringCalculator calc(argv[1]);
     try {
         res = StringCalculator::Add(argv[1]);
+        assert(res == calc.getResult());
     } catch (std::exception& exc) {
         return exc.what() + help(argv[0]);
     }
