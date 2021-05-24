@@ -13,11 +13,11 @@ class SubseqFinder {
     std::vector <int> seq_1;
     std::vector <int> seq_2;
  public:
-    SubseqFinder(std::vector <int> seq_1,
-                 std::vector <int> seq_2);
+    SubseqFinder(const std::vector <int>& seq_1,
+                 const std::vector <int>& seq_2);
     std::vector<int> getMaxSubseq();
-    static std::vector<int> findMaxSubseq(std::vector <int> seq_1,
-                                       std::vector <int> seq_2);
+    static std::vector<int> findMaxSubseq(const std::vector <int>& seq_1,
+                                          const std::vector <int>& seq_2);
 };
 
 #endif  // MODULES_SUBSEQ_FINDER_INCLUDE_SUBSEQ_FINDER_H_
