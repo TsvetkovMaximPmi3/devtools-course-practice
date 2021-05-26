@@ -5,6 +5,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <functional>
 #include "include/string_calculator.h"
 
 
