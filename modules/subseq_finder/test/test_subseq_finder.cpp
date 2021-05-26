@@ -52,18 +52,18 @@ TEST(Tsvetkov_Subseq_Finder, TestFuncNoThrow) {
 
 TEST(Tsvetkov_Subseq_Finder, TestFunction) {
     std::vector<int> result;
-    SubseqFinder::findMaxSubseq({1, 2, 3}, {2, 3}, &result)
+    SubseqFinder::findMaxSubseq({1, 2, 3}, {2, 3}, &result);
     ASSERT_EQ(result, std::vector<int>({2, 3}));
 }
 
 TEST(Tsvetkov_Subseq_Finder, TestFuncNoSubseq) {
     std::vector<int> result;
-    SubseqFinder::findMaxSubseq({1, 2, 3}, {4, 5}, &result)
+    SubseqFinder::findMaxSubseq({1, 2, 3}, {4, 5}, &result);
     ASSERT_EQ(result, std::vector<int>());
 }
 
 TEST(Tsvetkov_Subseq_Finder, TestFuncMaximalSubseq) {
     std::vector<int> result;
-    SubseqFinder::findMaxSubseq({1, 2, 3}, {1, 2, 3}, &result)
+    SubseqFinder::findMaxSubseq({1, 2, 3}, {1, 2, 3}, &result);
     ASSERT_EQ(result, std::vector<int>({1, 2, 3}));
 }
