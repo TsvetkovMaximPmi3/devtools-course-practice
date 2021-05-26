@@ -22,7 +22,7 @@ class StringCalculator {
 
          int result;
 
-         if (std::is_same_v<Op, std::multiplies<int>>) {
+         if (std::is_same<Op, std::multiplies<int>>::value) {
             result = 1;
          } else {
             result = 0;
